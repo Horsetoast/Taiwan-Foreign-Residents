@@ -1,28 +1,38 @@
 <template>
   <div class="chart">
-    <svg v-if="svgReady" :width="settings.width" :height="settings.height">
+    <svg v-if="svgReady" :height="canvasHeight">
       <transition-group tag="g" name="list">
         <g v-for="(row, index) in chartData" :key="row.country" class="list-row">
-          <image :x="0" :y="index * 50" :xlink:href="`flag-icons/svg/${countryAliases[row.country].code}.svg`" />       
+          <image 
+            class="flag-icon" 
+            :x="0"
+            :y="index * 50" 
+            :xlink:href="`flag-icons/svg/${countryAliases[row.country].code}.svg`" />       
           <text
-            class="pop-text"
+            class="row-text"
             :y="index * 50 + 15"
-            :x="40">
+            :x="0">
             {{ countryAliases[row.country].alias }}
           </text>
+          <text
+            class="row-code"
+            :y="index * 50 + 15"
+            :x="0">
+            {{ countryAliases[row.country].code }}
+          </text>
           <rect 
-            class="pop-bar male" 
+            class="row-bar male" 
             :key="'male-' + index" 
             :y="50 * index" 
-            :x="200"
+            :x="0"
             :width="row.maleWidth" 
             :height="20">
           </rect>
           <rect 
-            class="pop-bar female" 
+            class="row-bar female" 
             :key="'female-' + index" 
             :y="50 * index" 
-            :x="row.maleWidth + 200"
+            :x="row.maleWidth"
             :width="row.femaleWidth" 
             :height="20">
           </rect>
@@ -57,10 +67,7 @@ export default {
   },
   data() {
     return {
-      settings: {
-        width: null,
-        height: null
-      },
+      canvasHeight: null,
       jsonData: null,
       chartData: [],
       countryAliases
@@ -68,7 +75,8 @@ export default {
   },
   computed: {
     svgReady () {
-      return this.settings.width && this.settings.height;
+      // Draw chart when we have all required data and params
+      return this.canvasHeight;
     }
   },
   watch: {
@@ -106,8 +114,10 @@ export default {
       requestAnimationFrame(animate);
     },
     generateChart() {
-      const app = document.getElementById('app');
-      const barWidth = app.offsetWidth < 400 ? 50 : 300;
+      const chartEl = document.getElementsByClassName('chart')[0];
+      // Arbitrary bar width for mobile
+      const barWidth = chartEl.offsetWidth / 3;
+      console.log('barWi', barWidth);
       const scaleSqrt = d3
         .scaleSqrt()
         .domain([
@@ -138,8 +148,7 @@ export default {
           newData.push(entry);
         }
       });
-      this.settings.height = newData.length * 50;
-      this.settings.width = app.offsetWidth > 400 ? 600 : app.offsetWidth - 20;
+      this.canvasHeight = newData.length * 50;
       // console.table(newData);
       this.chartData = newData.sort((a, b) => {
         if((a.maleScaled + a.femaleScaled) < (b.maleScaled + b.femaleScaled)) {
@@ -171,14 +180,18 @@ export default {
 
 <style scoped lang="scss">
 .chart {
+  width: calc(100% - 30px);
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
   svg {
     position: relative;
-    border: 1px solid red;
+    width: 100%;
   }
-  .pop-text {
+  .row-text, .row-code {
     fill: #fff;
   }
-  .pop-bar {
+  .row-bar {
     &.male {
       fill: #00a4ed;
     }
@@ -199,8 +212,33 @@ export default {
   .list-leave-active {
     position: absolute;
   }
-  .flag-icon {
-    border-radius: 2px;
+}
+
+@media (max-width: 700px) {
+  .chart {
+    .row-text {
+      display: none;
+    }
+    .row-code {
+      transform: translateX(40px);
+    }
+    .row-bar {
+       transform: translateX(100px);
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .chart {
+    .row-text {
+      transform: translateX(40px);
+    }
+    .row-code {
+      display: none;
+    }
+    .row-bar {
+      transform: translateX(200px);
+    }
   }
 }
 </style>

@@ -5,11 +5,14 @@
       {{ Object.keys(option)[0] }}
     </option>
   </select> -->
-  <dropdown 
-    :data="countiesList" 
-    :cbChanged="changed"
-    :placeholder="'Select city'" 
-    :width="200"></dropdown>  
+  <div id="city-selector">
+    <dropdown
+      :data="countiesList" 
+      :cbChanged="changed"
+      :width="'auto'"
+      :placeholder="'Select city'">
+    </dropdown>
+  </div>
   <!-- <stf-select v-model="selectedCounty" style="width: 300px; margin: 0 auto">
     <div slot="label">Select county</div>
     <div slot="value">
@@ -54,29 +57,29 @@ export default {
     return {
       selectedCounty: "Total",
       countiesList: [
-        {label: "Total", value: "中文"},
-        {label: "New Taipei City", value: "中文"},
-        {label: "Taipei City", value: "中文"},
-        {label: "Taoyuan City", value: "中文"},
-        {label: "Taichung City", value: "中文"},
-        {label: "Tainan City", value: "中文"},
-        {label: "Kaohsiung City", value: "中文"},
-        {label: "Yilan County", value: "中文"},
-        {label: "Hsinchu County", value: "中文"},
-        {label: "Miaoli County", value: "中文"},
-        {label: "Changhua County", value: "中文"},
-        {label: "Nantou County", value: "中文"},
-        {label: "Yunlin County", value: "中文"},
-        {label: "Chiayi County", value: "中文"},
-        {label: "Pingtung County", value: "中文"},
-        {label: "Taitung County", value: "中文"},
-        {label: "Hualien County", value: "中文"},
-        {label: "Penghu County", value: "中文"},
-        {label: "Keelung City", value: "中文"},
-        {label: "Hsinchu City", value: "中文"},
-        {label: "Chiayi City", value: "中文"},
-        {label: "Kinmen County", value: "中文"},
-        {label: "Lienchiang County", value: "中文"}
+        {label: "Total"},
+        {label: "New Taipei City"},
+        {label: "Taipei City"},
+        {label: "Taoyuan City"},
+        {label: "Taichung City"},
+        {label: "Tainan City"},
+        {label: "Kaohsiung City"},
+        {label: "Yilan County"},
+        {label: "Hsinchu County"},
+        {label: "Miaoli County"},
+        {label: "Changhua County"},
+        {label: "Nantou County"},
+        {label: "Yunlin County"},
+        {label: "Chiayi County"},
+        {label: "Pingtung County"},
+        {label: "Taitung County"},
+        {label: "Hualien County"},
+        {label: "Penghu County"},
+        {label: "Keelung City"},
+        {label: "Hsinchu City"},
+        {label: "Chiayi City"},
+        {label: "Kinmen County"},
+        {label: "Lienchiang County"}
       ]      
     }
   },
@@ -89,12 +92,58 @@ export default {
 </script>
 
 <style lang="scss">
-  body {
-    background: #222536;    
+body {
+  background: #222536;    
+}
+#city-selector {
+  width: 100%;
+  padding: 50px 0;
+  margin: 0 auto;
+  max-width: 600px;
+  .hsy-dropdown {
+    width: 100%;
+    .selected:not(.item) {
+      border: none;
+      font-weight: 200;
+      border-bottom: 1px solid #fff;
+      border-radius: 0;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 20px;
+      height: 50px;
+      line-height: 50px;
+      padding: 0;
+      width: 100%;
+      &:hover {
+        color: #fff;
+      }
+    }
+    .list {
+      width: 100%;
+    }
+    .item.selected {
+      background: #989cb3;
+      padding: 0 10px;
+    }
   }
-  .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  #city-selector {
+    width: calc(100% - 30px);
+    .hsy-dropdown {
+      width: 100%;
+      .selected:not(.item) {
+        width: 100%;
+      }
+      .list {
+        width: 100%;
+      }
+    }    
+  } 
+}
 </style>
