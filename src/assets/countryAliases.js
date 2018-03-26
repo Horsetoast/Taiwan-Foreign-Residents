@@ -118,7 +118,7 @@ export default {
   "MOROCCO": { code: "MA", alias: "Morocco", region: "Africa" },
   "NIGERIA": { code: "NG", alias: "Nigeria", region: "Africa" },
   "ZIMBABWE": { code: "ZW", alias: "Zimbabwe", region: "Africa" },
-  "SOUTH AFRICA": { code: "SA", alias: "South Africa", region: "Africa" },
+  "SOUTH AFRICA": { code: "ZA", alias: "South Africa", region: "Africa" },
   "SWAZILAND": { code: "SZ", alias: "Swaziland", region: "Africa" },
   "UGANDA": { code: "UG", alias: "Uganda", region: "Africa" },
   "EGYPT": { code: "EG", alias: "Egypt", region: "Africa" },
