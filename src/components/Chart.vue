@@ -12,7 +12,9 @@
             class="row-text"
             :y="index * 50 + 15"
             :x="0">
-            {{ countryAliases[row.country].alias }}
+            <tspan>{{ countryAliases[row.country].alias }}</tspan>
+            <tspan dx="10" class="tspan male">{{ row.male }}</tspan>
+            <tspan dx="10" class="tspan female">{{ row.female }}</tspan>
           </text>
           <text
             class="row-code"
@@ -49,20 +51,30 @@ import countryAliases from "../assets/countryAliases.js";
 // console.log(taiwanCountries);
 
 // const widthScale = d3.scaleSqrt()
-//     .domain([2, d3.max(this.data, function(d) { return d.counties["Total"].m; })])
+//     .domain([2, d3.max(this.data, function(d) { return d.cities["Total"].m; })])
 //     .range([0, 200])
 
 // const scaleLog = d3.scaleLog()
-//     .domain([2, d3.max(this.data, function(d) { return d.counties["Total"].m; })])
+//     .domain([2, d3.max(this.data, function(d) { return d.cities["Total"].m; })])
 //     .range([0, 200])
 //     .base(2)
 
 export default {
   name: "Chart",
   props: {
-    selectedCounty: {
+    selectedCity: {
       type: String,
       default: "Total"
+    },
+    filters: {
+      type: Object,
+      default: () => {
+        return {
+          orderBy: "country",
+          male: true,
+          female: true
+        };
+      }
     }
   },
   data() {
@@ -74,7 +86,7 @@ export default {
     };
   },
   computed: {
-    svgReady () {
+    svgReady() {
       // Draw chart when we have all required data and params
       return this.canvasHeight;
     }
@@ -84,14 +96,20 @@ export default {
       if (!this.jsonData) return;
       this.generateChart();
     },
-    selectedCounty(newCountry, oldCountry) {
-      if (newCountry === oldCountry) return;
+    selectedCity(newCity, oldCity) {
+      if (newCity === oldCity) return;
       this.generateChart();
     },
     chartData() {
       this.$nextTick(() => {
         this.animateChart();
       });
+    },
+    filters: {
+      handler: function(newFilters) {
+        this.chartData = this.sortChart(this.chartData);
+      },
+      deep: true
     }
   },
   mounted() {
@@ -114,59 +132,79 @@ export default {
       requestAnimationFrame(animate);
     },
     generateChart() {
-      const chartEl = document.getElementsByClassName('chart')[0];
+      const chartEl = document.getElementsByClassName("chart")[0];
       // Arbitrary bar width for mobile
-      const barWidth = chartEl.offsetWidth / 3;
-      console.log('barWi', barWidth);
+      const barWidth = chartEl.offsetWidth / 4;
       const scaleSqrt = d3
         .scaleSqrt()
         .domain([
           2,
           d3.max(this.jsonData, d => {
-            return d.counties[this.selectedCounty].m;
+            return d.cities[this.selectedCity].m;
           })
         ])
         .range([0, barWidth]);
 
       const newData = [];
       this.jsonData.forEach((data, index) => {
-        const county = data.counties[this.selectedCounty];
+        const city = data.cities[this.selectedCity];
         const prevEntry = this.chartData.find(c => c.country === data.country);
         const prevMaleWidth = prevEntry ? prevEntry.maleWidth : 0;
         const prevFemaleWidth = prevEntry ? prevEntry.maleWidth : 0;
         // Higher than 1 otherwise log returns negative width
-        if (county.m > 2 && county.f > 2) {
+        if (city.m > 2 && city.f > 2) {
           const entry = {
             country: data.country,
-            maleWidth: prevMaleWidth,
-            femaleWidth: prevFemaleWidth,
-            maleScaled: scaleSqrt(county.m),
-            femaleScaled: scaleSqrt(county.f),
-            male: county.m,
-            female: county.f
+            maleWidth: this.filters.male ? prevMaleWidth : 0,
+            femaleWidth: this.filters.female ? prevFemaleWidth : 0,
+            maleScaled: scaleSqrt(city.m),
+            femaleScaled: scaleSqrt(city.f),
+            male: city.m,
+            female: city.f
           };
           newData.push(entry);
         }
       });
       this.canvasHeight = newData.length * 50;
-      // console.table(newData);
-      this.chartData = newData.sort((a, b) => {
-        if((a.maleScaled + a.femaleScaled) < (b.maleScaled + b.femaleScaled)) {
-          return 1;
-        } else if ((a.maleScaled + a.femaleScaled) > (b.maleScaled + b.femaleScaled)) {
-          return -1;
-        } else {
-          return 0;
-        }
-      });
+      this.chartData = this.sortChart(newData);
+    },
+    sortChart(data) {
+      const orderBy = this.filters.orderBy;
+      if (orderBy === "country") {
+        return data.sort((a, b) => {
+          if (a.country < b.country) {
+            return -1;
+          } else if (a.country > b.country) {
+            return 1;
+          } else {
+            return 0;
+          }
+        });
+      } else {
+        return data.sort((a, b) => {
+          const countM = this.filters.male;
+          const countF = this.filters.female;
+          const aSum =
+            (countM ? a.maleScaled : 0) + (countF ? a.femaleScaled : 0);
+          const bSum =
+            (countM ? b.maleScaled : 0) + (countF ? b.femaleScaled : 0);
+          if (aSum < bSum) {
+            return orderBy === "highest" ? 1 : -1;
+          } else if (aSum > bSum) {
+            return orderBy === "highest" ? -1 : 1;
+          } else {
+            return 0;
+          }
+        });
+      }
     },
     animateChart() {
       this.chartData.forEach(entry => {
         const tween = new TWEEN.Tween(entry) // Create a new tween that modifies 'coords'.
           .to(
             {
-              maleWidth: entry.maleScaled,
-              femaleWidth: entry.femaleScaled
+              maleWidth: this.filters.male ? entry.maleScaled : 0,
+              femaleWidth: this.filters.female ? entry.femaleScaled : 0
             },
             1000
           )
@@ -181,15 +219,24 @@ export default {
 <style scoped lang="scss">
 .chart {
   width: calc(100% - 30px);
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   position: relative;
   svg {
     position: relative;
     width: 100%;
   }
-  .row-text, .row-code {
+  .row-text,
+  .row-code {
     fill: #fff;
+  }
+  .tspan {
+    &.male {
+      fill: #00a4ed;
+    }
+    &.female {
+      fill: #e52669;
+    }
   }
   .row-bar {
     &.male {
@@ -200,12 +247,12 @@ export default {
     }
   }
   .list-row {
-    transition: all 1s;
+    transition: all 0.5s;
     display: inline-block;
     margin-right: 10px;
   }
-  .list-enter, .list-leave-to
-  /* .list-complete-leave-active below version 2.1.8 */ {
+  .list-enter,
+  .list-leave-to {
     opacity: 0;
     transform: translateY(30px);
   }
@@ -223,7 +270,7 @@ export default {
       transform: translateX(40px);
     }
     .row-bar {
-       transform: translateX(100px);
+      transform: translateX(100px);
     }
   }
 }
@@ -237,7 +284,7 @@ export default {
       display: none;
     }
     .row-bar {
-      transform: translateX(200px);
+      transform: translateX(240px);
     }
   }
 }

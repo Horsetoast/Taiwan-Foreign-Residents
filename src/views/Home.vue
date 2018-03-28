@@ -1,37 +1,48 @@
 <template>
   <div class="home">
-  <!-- <select v-model="selectedCounty">
-    <option v-for="(option, index) in countiesList" :value="Object.keys(option)[0]" :key="index">
-      {{ Object.keys(option)[0] }}
-    </option>
-  </select> -->
-  <div id="city-selector">
-    <dropdown
-      :data="countiesList" 
-      :cbChanged="changed"
-      :width="'auto'"
-      :placeholder="'Select city'">
-    </dropdown>
-  </div>
-  <!-- <stf-select v-model="selectedCounty" style="width: 300px; margin: 0 auto">
-    <div slot="label">Select county</div>
-    <div slot="value">
-      <div v-if="selectedCounty">
-          <span>{{selectedCounty.english}}</span>
-      </div>
+    <div id="city-selector">
+      <span>Select city</span>
+      <dropdown
+        :data="countiesList" 
+        :cbChanged="changed"
+        :placeholder="'Select city'">
+      </dropdown>
     </div>
-    <section class="options delivery_order__options">
-        <stf-select-option  
-          v-for="(item, index) of countiesList" :key="index"
-          :value="item"
-          >
-            <span>{{item.english}}</span>
-        </stf-select-option>
-    </section>
-  </stf-select>   -->
-  <!-- <span>Selected: {{ selectedCounty }}</span>     -->
     <div class="wrapper">
-      <Chart :selectedCounty="selectedCounty" />
+      <div id="chart-filters">
+        <ul>
+          <li><span>Sort by</span></li>
+          <li><a href="#" @click.prevent="orderBy('country')" :class="{'is-active': filters.orderBy === 'country'}">Country name</a></li>
+          <li>
+            <a href="#" @click.prevent="orderBy('highest')" :class="{'is-active': filters.orderBy === 'highest'}">
+              <span class="icon icon-up-dir"></span>
+              <span>Highest</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" @click.prevent="orderBy('lowest')" :class="{'is-active': filters.orderBy === 'lowest'}">
+              <span class="icon icon-down-dir"></span>
+              <span>Lowest</span>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li><span>Show</span></li>
+          <li>
+            <a href="#" class="gender male" @click.prevent="toggleGender('male')" :class="{'is-active': filters.male}">
+              <span class="icon icon-male"></span>
+              <span>Male</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="gender female" @click.prevent="toggleGender('female')" :class="{'is-active': filters.female}">
+              <span class="icon icon-female"></span>
+              <span>Female</span>
+            </a>
+          </li>
+        </ul>
+      </div>      
+      <Chart :selectedCity="selectedCity" :filters="filters" />
     </div>
   </div>
 </template>
@@ -55,9 +66,14 @@ export default {
   },
   data () {
     return {
-      selectedCounty: "Total",
+      selectedCity: "Total",
+      filters: {
+        orderBy: "country",
+        male: true,
+        female: true
+      },
       countiesList: [
-        {label: "Total"},
+        {label: "Total", selected: true},
         {label: "New Taipei City"},
         {label: "Taipei City"},
         {label: "Taoyuan City"},
@@ -85,7 +101,15 @@ export default {
   },
   methods: {
     changed (item) {
-      this.selectedCounty = item[0].label;
+      this.selectedCity = item[0].label;
+    },
+    orderBy (type) {
+      this.filters.orderBy = type;
+    },
+    toggleGender (gender) {
+      if(this.filters.male && this.filters.female || this.filters[gender] === false) {
+        this.filters[gender] = !this.filters[gender];
+      }
     }
   }
 };
@@ -97,28 +121,34 @@ body {
 }
 #city-selector {
   width: 100%;
-  padding: 50px 0;
+  padding: 50px 0 10px;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 800px;
+  & > span {
+    font-size: 0.85em;
+    color:#989cb3;
+  }
   .hsy-dropdown {
-    width: 100%;
+    width: 100% !important;
     .selected:not(.item) {
       border: none;
       font-weight: 200;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid #989cb3;
       border-radius: 0;
-      color: rgba(255, 255, 255, 0.7);
+      color: #fff;
       font-size: 20px;
       height: 50px;
       line-height: 50px;
       padding: 0;
-      width: 100%;
+      width: 100% !important;
+      background-position: center right !important;
+      transition: all 0.3s;
       &:hover {
-        color: #fff;
+        border-bottom: 1px solid #fff;
       }
     }
     .list {
-      width: 100%;
+      width: 100% !important;
     }
     .item.selected {
       background: #989cb3;
@@ -126,24 +156,88 @@ body {
     }
   }
 }
+
+#chart-filters {
+  color: #989cb3;
+  max-width: 800px;
+  width: calc(100% - 40px);
+  margin: 0 auto 40px;
+  border-bottom: 1px solid lighten(#222536, 10%);
+  padding: 20px 0;
+  box-sizing: border-box;
+  font-size: 0.85em;
+  ul {
+    display: block;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 15px;
+    li {
+      display: inline-block;
+    }
+    a {
+      margin-left: 15px;
+      display: inline-block;
+      text-decoration: none;
+      color: #989cb3;
+      background: lighten(#222536, 10%);
+      padding: 8px 14px;
+      border-radius: 20px;
+      .icon {
+        margin-left: -4px;
+      }
+      &:hover {
+        color: #fff;
+        background: lighten(#222536, 14%);
+      }
+      &.is-active {
+        color: #fff;
+      }
+      &.gender {
+        &.male {
+          color: #fff;
+          background: #00a4ed;
+          &:hover {
+            background: darken(#00a4ed, 8%);
+          }
+        }
+        &.female {
+          color: #fff;
+          background: #e52669;
+          &:hover {
+            background: darken(#e52669, 8%);
+          }          
+        }
+        &:not(.is-active) {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}
+
 .wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 @media (max-width: 700px) {
   #city-selector {
-    width: calc(100% - 30px);
-    .hsy-dropdown {
-      width: 100%;
-      .selected:not(.item) {
-        width: 100%;
+    padding-top: 15px;
+    width: calc(100% - 30px);  
+  }
+  #chart-filters {
+    padding: 20px;
+    ul {
+      li {
+        a {
+          margin: 8px 5px;
+        }
+        &:first-child {
+          display: block;
+          margin-bottom: 10px;
+        }
       }
-      .list {
-        width: 100%;
-      }
-    }    
-  } 
+    }
+  }
 }
 </style>
