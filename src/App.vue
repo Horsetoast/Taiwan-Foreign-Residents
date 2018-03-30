@@ -6,7 +6,7 @@
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
-@import '/fontello.css';
+@import './fontello.css';
 
 body, html {
   margin: 0;
