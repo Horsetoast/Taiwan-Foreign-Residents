@@ -1,7 +1,7 @@
 [
   {
     "country": "All Foreigners",
-    "counties": {
+    "cities": {
       "Total": { "m": 326658, "f": 391078 },
       "New Taipei City": { "m": 40198, "f": 60825 },
       "Taipei City": { "m": 16101, "f": 49287 },
@@ -29,7 +29,7 @@
   },
   {
     "country": "STATELESS",
-    "counties": {
+    "cities": {
       "Total": { "m": 66, "f": 55 },
       "New Taipei City": { "m": 17, "f": 6 },
       "Taipei City": { "m": 16, "f": 9 },
@@ -57,7 +57,7 @@
   },
   {
     "country": "AFGHANISTAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 1, "f": 0 },
@@ -85,7 +85,7 @@
   },
   {
     "country": "BHUTAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 14, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 5, "f": 0 },
@@ -113,7 +113,7 @@
   },
   {
     "country": "BRUNEI DARUSSALAM",
-    "counties": {
+    "cities": {
       "Total": { "m": 3, "f": 7 },
       "New Taipei City": { "m": 0, "f": 1 },
       "Taipei City": { "m": 1, "f": 4 },
@@ -141,7 +141,7 @@
   },
   {
     "country": "MYANMAR",
-    "counties": {
+    "cities": {
       "Total": { "m": 568, "f": 853 },
       "New Taipei City": { "m": 194, "f": 361 },
       "Taipei City": { "m": 74, "f": 154 },
@@ -169,7 +169,7 @@
   },
   {
     "country": "CAMBODIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 19, "f": 72 },
       "New Taipei City": { "m": 0, "f": 9 },
       "Taipei City": { "m": 5, "f": 7 },
@@ -197,7 +197,7 @@
   },
   {
     "country": "SRI LANKA",
-    "counties": {
+    "cities": {
       "Total": { "m": 44, "f": 9 },
       "New Taipei City": { "m": 6, "f": 0 },
       "Taipei City": { "m": 12, "f": 2 },
@@ -225,7 +225,7 @@
   },
   {
     "country": "CYPRUS",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -253,7 +253,7 @@
   },
   {
     "country": "INDIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 2246, "f": 913 },
       "New Taipei City": { "m": 281, "f": 141 },
       "Taipei City": { "m": 796, "f": 353 },
@@ -281,7 +281,7 @@
   },
   {
     "country": "INDONESIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 59960, "f": 178153 },
       "New Taipei City": { "m": 6821, "f": 29881 },
       "Taipei City": { "m": 1000, "f": 29315 },
@@ -309,7 +309,7 @@
   },
   {
     "country": "IRAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 72, "f": 24 },
       "New Taipei City": { "m": 17, "f": 5 },
       "Taipei City": { "m": 14, "f": 3 },
@@ -337,7 +337,7 @@
   },
   {
     "country": "IRAQ",
-    "counties": {
+    "cities": {
       "Total": { "m": 20, "f": 3 },
       "New Taipei City": { "m": 4, "f": 0 },
       "Taipei City": { "m": 8, "f": 0 },
@@ -365,7 +365,7 @@
   },
   {
     "country": "ISRAEL",
-    "counties": {
+    "cities": {
       "Total": { "m": 72, "f": 34 },
       "New Taipei City": { "m": 14, "f": 3 },
       "Taipei City": { "m": 43, "f": 26 },
@@ -393,7 +393,7 @@
   },
   {
     "country": "JAPAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 6738, "f": 5034 },
       "New Taipei City": { "m": 663, "f": 645 },
       "Taipei City": { "m": 3192, "f": 2496 },
@@ -421,7 +421,7 @@
   },
   {
     "country": "JORDAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 69, "f": 25 },
       "New Taipei City": { "m": 8, "f": 1 },
       "Taipei City": { "m": 25, "f": 6 },
@@ -449,7 +449,7 @@
   },
   {
     "country": "KOREA",
-    "counties": {
+    "cities": {
       "Total": { "m": 1984, "f": 2245 },
       "New Taipei City": { "m": 315, "f": 391 },
       "Taipei City": { "m": 755, "f": 933 },
@@ -477,7 +477,7 @@
   },
   {
     "country": "LAO PEOPLE'S DEM REP",
-    "counties": {
+    "cities": {
       "Total": { "m": 14, "f": 23 },
       "New Taipei City": { "m": 0, "f": 2 },
       "Taipei City": { "m": 0, "f": 1 },
@@ -505,7 +505,7 @@
   },
   {
     "country": "LEBANON",
-    "counties": {
+    "cities": {
       "Total": { "m": 6, "f": 0 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 2, "f": 0 },
@@ -533,7 +533,7 @@
   },
   {
     "country": "MALAYSIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 10745, "f": 10098 },
       "New Taipei City": { "m": 1423, "f": 1496 },
       "Taipei City": { "m": 2108, "f": 2420 },
@@ -561,7 +561,7 @@
   },
   {
     "country": "MONGOLIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 387, "f": 560 },
       "New Taipei City": { "m": 18, "f": 23 },
       "Taipei City": { "m": 31, "f": 62 },
@@ -589,7 +589,7 @@
   },
   {
     "country": "NEPAL",
-    "counties": {
+    "cities": {
       "Total": { "m": 94, "f": 17 },
       "New Taipei City": { "m": 11, "f": 4 },
       "Taipei City": { "m": 26, "f": 6 },
@@ -617,7 +617,7 @@
   },
   {
     "country": "PAKISTAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 97, "f": 19 },
       "New Taipei City": { "m": 13, "f": 4 },
       "Taipei City": { "m": 37, "f": 7 },
@@ -645,7 +645,7 @@
   },
   {
     "country": "PHILIPPINES",
-    "counties": {
+    "cities": {
       "Total": { "m": 54199, "f": 88374 },
       "New Taipei City": { "m": 4545, "f": 7799 },
       "Taipei City": { "m": 347, "f": 6204 },
@@ -673,7 +673,7 @@
   },
   {
     "country": "SINGAPORE",
-    "counties": {
+    "cities": {
       "Total": { "m": 770, "f": 602 },
       "New Taipei City": { "m": 109, "f": 96 },
       "Taipei City": { "m": 270, "f": 235 },
@@ -701,7 +701,7 @@
   },
   {
     "country": "SYRIAN ARAB",
-    "counties": {
+    "cities": {
       "Total": { "m": 6, "f": 4 },
       "New Taipei City": { "m": 3, "f": 3 },
       "Taipei City": { "m": 2, "f": 1 },
@@ -729,7 +729,7 @@
   },
   {
     "country": "THAILAND",
-    "counties": {
+    "cities": {
       "Total": { "m": 51286, "f": 13669 },
       "New Taipei City": { "m": 6733, "f": 2345 },
       "Taipei City": { "m": 243, "f": 512 },
@@ -757,7 +757,7 @@
   },
   {
     "country": "TIMOR",
-    "counties": {
+    "cities": {
       "Total": { "m": 0, "f": 4 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -785,7 +785,7 @@
   },
   {
     "country": "TURKEY",
-    "counties": {
+    "cities": {
       "Total": { "m": 197, "f": 57 },
       "New Taipei City": { "m": 51, "f": 22 },
       "Taipei City": { "m": 52, "f": 21 },
@@ -813,7 +813,7 @@
   },
   {
     "country": "VIETNAM",
-    "counties": {
+    "cities": {
       "Total": { "m": 120118, "f": 83012 },
       "New Taipei City": { "m": 16173, "f": 16530 },
       "Taipei City": { "m": 903, "f": 3848 },
@@ -841,7 +841,7 @@
   },
   {
     "country": "BANGLADESH",
-    "counties": {
+    "cities": {
       "Total": { "m": 32, "f": 6 },
       "New Taipei City": { "m": 5, "f": 0 },
       "Taipei City": { "m": 11, "f": 2 },
@@ -869,7 +869,7 @@
   },
   {
     "country": "OMAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -897,7 +897,7 @@
   },
   {
     "country": "KIRIBATI",
-    "counties": {
+    "cities": {
       "Total": { "m": 26, "f": 42 },
       "New Taipei City": { "m": 8, "f": 11 },
       "Taipei City": { "m": 5, "f": 3 },
@@ -925,7 +925,7 @@
   },
   {
     "country": "TUVALU",
-    "counties": {
+    "cities": {
       "Total": { "m": 16, "f": 19 },
       "New Taipei City": { "m": 4, "f": 10 },
       "Taipei City": { "m": 0, "f": 4 },
@@ -953,7 +953,7 @@
   },
   {
     "country": "UNITED ARAB",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 1, "f": 0 },
@@ -981,7 +981,7 @@
   },
   {
     "country": "SOLOMON",
-    "counties": {
+    "cities": {
       "Total": { "m": 49, "f": 38 },
       "New Taipei City": { "m": 14, "f": 12 },
       "Taipei City": { "m": 1, "f": 1 },
@@ -1009,7 +1009,7 @@
   },
   {
     "country": "YEMEN",
-    "counties": {
+    "cities": {
       "Total": { "m": 4, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 1, "f": 0 },
@@ -1037,7 +1037,7 @@
   },
   {
     "country": "PALESTINIAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 4, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -1065,7 +1065,7 @@
   },
   {
     "country": "MACAO",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -1093,7 +1093,7 @@
   },
   {
     "country": "AUSTRALIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 526, "f": 239 },
       "New Taipei City": { "m": 71, "f": 34 },
       "Taipei City": { "m": 210, "f": 102 },
@@ -1121,7 +1121,7 @@
   },
   {
     "country": "FIJI",
-    "counties": {
+    "cities": {
       "Total": { "m": 0, "f": 4 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 2 },
@@ -1149,7 +1149,7 @@
   },
   {
     "country": "NAURU",
-    "counties": {
+    "cities": {
       "Total": { "m": 11, "f": 13 },
       "New Taipei City": { "m": 3, "f": 10 },
       "Taipei City": { "m": 3, "f": 1 },
@@ -1177,7 +1177,7 @@
   },
   {
     "country": "NEW ZEALAND",
-    "counties": {
+    "cities": {
       "Total": { "m": 186, "f": 73 },
       "New Taipei City": { "m": 31, "f": 9 },
       "Taipei City": { "m": 56, "f": 38 },
@@ -1205,7 +1205,7 @@
   },
   {
     "country": "TONGA",
-    "counties": {
+    "cities": {
       "Total": { "m": 4, "f": 1 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 1, "f": 1 },
@@ -1233,7 +1233,7 @@
   },
   {
     "country": "WESTERN SAMOA",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 1 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -1261,7 +1261,7 @@
   },
   {
     "country": "VANUATU",
-    "counties": {
+    "cities": {
       "Total": { "m": 0, "f": 1 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 1 },
@@ -1289,7 +1289,7 @@
   },
   {
     "country": "MICRONESIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 0, "f": 1 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -1317,7 +1317,7 @@
   },
   {
     "country": "PALAU",
-    "counties": {
+    "cities": {
       "Total": { "m": 15, "f": 28 },
       "New Taipei City": { "m": 3, "f": 8 },
       "Taipei City": { "m": 2, "f": 10 },
@@ -1345,7 +1345,7 @@
   },
   {
     "country": "ALBANIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 1 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 1 },
@@ -1373,7 +1373,7 @@
   },
   {
     "country": "AUSTRIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 71, "f": 32 },
       "New Taipei City": { "m": 20, "f": 5 },
       "Taipei City": { "m": 21, "f": 12 },
@@ -1401,7 +1401,7 @@
   },
   {
     "country": "BELGIUM",
-    "counties": {
+    "cities": {
       "Total": { "m": 94, "f": 29 },
       "New Taipei City": { "m": 29, "f": 3 },
       "Taipei City": { "m": 32, "f": 9 },
@@ -1429,7 +1429,7 @@
   },
   {
     "country": "BULGARIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 9, "f": 2 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 2, "f": 1 },
@@ -1457,7 +1457,7 @@
   },
   {
     "country": "BELARUS",
-    "counties": {
+    "cities": {
       "Total": { "m": 38, "f": 32 },
       "New Taipei City": { "m": 7, "f": 1 },
       "Taipei City": { "m": 8, "f": 7 },
@@ -1485,7 +1485,7 @@
   },
   {
     "country": "CZECH",
-    "counties": {
+    "cities": {
       "Total": { "m": 56, "f": 22 },
       "New Taipei City": { "m": 5, "f": 1 },
       "Taipei City": { "m": 22, "f": 9 },
@@ -1513,7 +1513,7 @@
   },
   {
     "country": "DENMARK",
-    "counties": {
+    "cities": {
       "Total": { "m": 56, "f": 19 },
       "New Taipei City": { "m": 6, "f": 0 },
       "Taipei City": { "m": 35, "f": 15 },
@@ -1541,7 +1541,7 @@
   },
   {
     "country": "FINLAND",
-    "counties": {
+    "cities": {
       "Total": { "m": 33, "f": 12 },
       "New Taipei City": { "m": 11, "f": 3 },
       "Taipei City": { "m": 12, "f": 4 },
@@ -1569,7 +1569,7 @@
   },
   {
     "country": "FRANCE",
-    "counties": {
+    "cities": {
       "Total": { "m": 938, "f": 319 },
       "New Taipei City": { "m": 167, "f": 61 },
       "Taipei City": { "m": 450, "f": 153 },
@@ -1597,7 +1597,7 @@
   },
   {
     "country": "GERMANY",
-    "counties": {
+    "cities": {
       "Total": { "m": 626, "f": 206 },
       "New Taipei City": { "m": 96, "f": 23 },
       "Taipei City": { "m": 281, "f": 109 },
@@ -1625,7 +1625,7 @@
   },
   {
     "country": "GREECE",
-    "counties": {
+    "cities": {
       "Total": { "m": 37, "f": 2 },
       "New Taipei City": { "m": 6, "f": 0 },
       "Taipei City": { "m": 17, "f": 0 },
@@ -1653,7 +1653,7 @@
   },
   {
     "country": "HUNGARY",
-    "counties": {
+    "cities": {
       "Total": { "m": 46, "f": 21 },
       "New Taipei City": { "m": 8, "f": 1 },
       "Taipei City": { "m": 16, "f": 10 },
@@ -1681,7 +1681,7 @@
   },
   {
     "country": "ICELAND",
-    "counties": {
+    "cities": {
       "Total": { "m": 4, "f": 2 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 2, "f": 2 },
@@ -1709,7 +1709,7 @@
   },
   {
     "country": "IRELAND",
-    "counties": {
+    "cities": {
       "Total": { "m": 116, "f": 19 },
       "New Taipei City": { "m": 23, "f": 4 },
       "Taipei City": { "m": 34, "f": 5 },
@@ -1737,7 +1737,7 @@
   },
   {
     "country": "ITALY",
-    "counties": {
+    "cities": {
       "Total": { "m": 292, "f": 92 },
       "New Taipei City": { "m": 46, "f": 14 },
       "Taipei City": { "m": 95, "f": 43 },
@@ -1765,7 +1765,7 @@
   },
   {
     "country": "MALTA",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 1, "f": 0 },
@@ -1793,7 +1793,7 @@
   },
   {
     "country": "NETHERLANDS",
-    "counties": {
+    "cities": {
       "Total": { "m": 218, "f": 48 },
       "New Taipei City": { "m": 34, "f": 5 },
       "Taipei City": { "m": 74, "f": 29 },
@@ -1821,7 +1821,7 @@
   },
   {
     "country": "NORWAY",
-    "counties": {
+    "cities": {
       "Total": { "m": 20, "f": 8 },
       "New Taipei City": { "m": 3, "f": 2 },
       "Taipei City": { "m": 13, "f": 4 },
@@ -1849,7 +1849,7 @@
   },
   {
     "country": "POLAND",
-    "counties": {
+    "cities": {
       "Total": { "m": 102, "f": 92 },
       "New Taipei City": { "m": 22, "f": 20 },
       "Taipei City": { "m": 35, "f": 33 },
@@ -1877,7 +1877,7 @@
   },
   {
     "country": "PORTUGAL",
-    "counties": {
+    "cities": {
       "Total": { "m": 77, "f": 32 },
       "New Taipei City": { "m": 10, "f": 5 },
       "Taipei City": { "m": 22, "f": 15 },
@@ -1905,7 +1905,7 @@
   },
   {
     "country": "ROMANIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 21, "f": 11 },
       "New Taipei City": { "m": 3, "f": 0 },
       "Taipei City": { "m": 11, "f": 8 },
@@ -1933,7 +1933,7 @@
   },
   {
     "country": "SPAIN",
-    "counties": {
+    "cities": {
       "Total": { "m": 246, "f": 85 },
       "New Taipei City": { "m": 49, "f": 8 },
       "Taipei City": { "m": 89, "f": 35 },
@@ -1961,7 +1961,7 @@
   },
   {
     "country": "SWEDEN",
-    "counties": {
+    "cities": {
       "Total": { "m": 95, "f": 30 },
       "New Taipei City": { "m": 9, "f": 5 },
       "Taipei City": { "m": 47, "f": 15 },
@@ -1989,7 +1989,7 @@
   },
   {
     "country": "SWITZERLAND",
-    "counties": {
+    "cities": {
       "Total": { "m": 120, "f": 30 },
       "New Taipei City": { "m": 21, "f": 4 },
       "Taipei City": { "m": 47, "f": 10 },
@@ -2017,7 +2017,7 @@
   },
   {
     "country": "UKRAINE",
-    "counties": {
+    "cities": {
       "Total": { "m": 92, "f": 113 },
       "New Taipei City": { "m": 13, "f": 9 },
       "Taipei City": { "m": 9, "f": 9 },
@@ -2045,7 +2045,7 @@
   },
   {
     "country": "UNITED KINGDOM",
-    "counties": {
+    "cities": {
       "Total": { "m": 1402, "f": 314 },
       "New Taipei City": { "m": 248, "f": 52 },
       "Taipei City": { "m": 532, "f": 141 },
@@ -2073,7 +2073,7 @@
   },
   {
     "country": "PAPUA NEW GUINEA",
-    "counties": {
+    "cities": {
       "Total": { "m": 13, "f": 11 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 7, "f": 7 },
@@ -2101,7 +2101,7 @@
   },
   {
     "country": "LATVIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 6, "f": 6 },
       "New Taipei City": { "m": 0, "f": 1 },
       "Taipei City": { "m": 2, "f": 4 },
@@ -2129,7 +2129,7 @@
   },
   {
     "country": "ESTONIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 5, "f": 4 },
       "New Taipei City": { "m": 1, "f": 1 },
       "Taipei City": { "m": 1, "f": 3 },
@@ -2157,7 +2157,7 @@
   },
   {
     "country": "ARMENIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 12, "f": 9 },
       "New Taipei City": { "m": 3, "f": 1 },
       "Taipei City": { "m": 3, "f": 2 },
@@ -2185,7 +2185,7 @@
   },
   {
     "country": "RUSSIAN FEDERATION",
-    "counties": {
+    "cities": {
       "Total": { "m": 204, "f": 305 },
       "New Taipei City": { "m": 38, "f": 53 },
       "Taipei City": { "m": 63, "f": 115 },
@@ -2213,7 +2213,7 @@
   },
   {
     "country": "LITHUANIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 4, "f": 6 },
       "New Taipei City": { "m": 1, "f": 1 },
       "Taipei City": { "m": 0, "f": 3 },
@@ -2241,7 +2241,7 @@
   },
   {
     "country": "UZBEKISTAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 16, "f": 23 },
       "New Taipei City": { "m": 1, "f": 6 },
       "Taipei City": { "m": 2, "f": 2 },
@@ -2269,7 +2269,7 @@
   },
   {
     "country": "KAZAKHSTAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 13, "f": 9 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 1, "f": 1 },
@@ -2297,7 +2297,7 @@
   },
   {
     "country": "MOLDOVA",
-    "counties": {
+    "cities": {
       "Total": { "m": 6, "f": 3 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -2325,7 +2325,7 @@
   },
   {
     "country": "KYRGYZSTAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 12, "f": 6 },
       "New Taipei City": { "m": 0, "f": 2 },
       "Taipei City": { "m": 2, "f": 0 },
@@ -2353,7 +2353,7 @@
   },
   {
     "country": "TAJIKISTAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 4, "f": 0 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 1, "f": 0 },
@@ -2381,7 +2381,7 @@
   },
   {
     "country": "TURKMEN",
-    "counties": {
+    "cities": {
       "Total": { "m": 6, "f": 4 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -2409,7 +2409,7 @@
   },
   {
     "country": "AZERBAIJAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 2, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 1, "f": 0 },
@@ -2437,7 +2437,7 @@
   },
   {
     "country": "GEORGIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 2, "f": 2 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 2, "f": 1 },
@@ -2465,7 +2465,7 @@
   },
   {
     "country": "CROATIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 27, "f": 3 },
       "New Taipei City": { "m": 4, "f": 0 },
       "Taipei City": { "m": 7, "f": 3 },
@@ -2493,7 +2493,7 @@
   },
   {
     "country": "SLOVENIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 9, "f": 10 },
       "New Taipei City": { "m": 2, "f": 1 },
       "Taipei City": { "m": 5, "f": 3 },
@@ -2521,7 +2521,7 @@
   },
   {
     "country": "MACEDONIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 9, "f": 3 },
       "New Taipei City": { "m": 3, "f": 2 },
       "Taipei City": { "m": 2, "f": 1 },
@@ -2549,7 +2549,7 @@
   },
   {
     "country": "BOSNIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 0, "f": 1 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -2577,7 +2577,7 @@
   },
   {
     "country": "SLOVAKIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 23, "f": 6 },
       "New Taipei City": { "m": 6, "f": 0 },
       "Taipei City": { "m": 7, "f": 2 },
@@ -2605,7 +2605,7 @@
   },
   {
     "country": "SERBIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 14, "f": 6 },
       "New Taipei City": { "m": 3, "f": 1 },
       "Taipei City": { "m": 2, "f": 1 },
@@ -2633,7 +2633,7 @@
   },
   {
     "country": "BARBADOS",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 1 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 1, "f": 1 },
@@ -2661,7 +2661,7 @@
   },
   {
     "country": "CANADA",
-    "counties": {
+    "cities": {
       "Total": { "m": 1446, "f": 585 },
       "New Taipei City": { "m": 228, "f": 97 },
       "Taipei City": { "m": 466, "f": 206 },
@@ -2689,7 +2689,7 @@
   },
   {
     "country": "COSTA RICA",
-    "counties": {
+    "cities": {
       "Total": { "m": 8, "f": 11 },
       "New Taipei City": { "m": 1, "f": 3 },
       "Taipei City": { "m": 4, "f": 5 },
@@ -2717,7 +2717,7 @@
   },
   {
     "country": "CUBA",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 1 },
       "New Taipei City": { "m": 0, "f": 1 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -2745,7 +2745,7 @@
   },
   {
     "country": "DOMINICAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 40, "f": 26 },
       "New Taipei City": { "m": 11, "f": 8 },
       "Taipei City": { "m": 9, "f": 11 },
@@ -2773,7 +2773,7 @@
   },
   {
     "country": "EL SALVADOR",
-    "counties": {
+    "cities": {
       "Total": { "m": 80, "f": 54 },
       "New Taipei City": { "m": 21, "f": 16 },
       "Taipei City": { "m": 25, "f": 18 },
@@ -2801,7 +2801,7 @@
   },
   {
     "country": "GUATEMALA",
-    "counties": {
+    "cities": {
       "Total": { "m": 61, "f": 56 },
       "New Taipei City": { "m": 12, "f": 11 },
       "Taipei City": { "m": 19, "f": 24 },
@@ -2829,7 +2829,7 @@
   },
   {
     "country": "HAITI",
-    "counties": {
+    "cities": {
       "Total": { "m": 106, "f": 32 },
       "New Taipei City": { "m": 11, "f": 3 },
       "Taipei City": { "m": 15, "f": 6 },
@@ -2857,7 +2857,7 @@
   },
   {
     "country": "HONDURAS",
-    "counties": {
+    "cities": {
       "Total": { "m": 157, "f": 93 },
       "New Taipei City": { "m": 27, "f": 7 },
       "Taipei City": { "m": 42, "f": 39 },
@@ -2885,7 +2885,7 @@
   },
   {
     "country": "JAMAICA",
-    "counties": {
+    "cities": {
       "Total": { "m": 5, "f": 2 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 2, "f": 0 },
@@ -2913,7 +2913,7 @@
   },
   {
     "country": "MEXICO",
-    "counties": {
+    "cities": {
       "Total": { "m": 117, "f": 72 },
       "New Taipei City": { "m": 23, "f": 9 },
       "Taipei City": { "m": 42, "f": 23 },
@@ -2941,7 +2941,7 @@
   },
   {
     "country": "NICARAGUA",
-    "counties": {
+    "cities": {
       "Total": { "m": 92, "f": 50 },
       "New Taipei City": { "m": 20, "f": 7 },
       "Taipei City": { "m": 26, "f": 21 },
@@ -2969,7 +2969,7 @@
   },
   {
     "country": "PANAMA",
-    "counties": {
+    "cities": {
       "Total": { "m": 63, "f": 49 },
       "New Taipei City": { "m": 10, "f": 7 },
       "Taipei City": { "m": 29, "f": 31 },
@@ -2997,7 +2997,7 @@
   },
   {
     "country": "U S A",
-    "counties": {
+    "cities": {
       "Total": { "m": 6431, "f": 2486 },
       "New Taipei City": { "m": 985, "f": 304 },
       "Taipei City": { "m": 2545, "f": 1035 },
@@ -3025,7 +3025,7 @@
   },
   {
     "country": "MARSHALL",
-    "counties": {
+    "cities": {
       "Total": { "m": 19, "f": 18 },
       "New Taipei City": { "m": 3, "f": 7 },
       "Taipei City": { "m": 4, "f": 5 },
@@ -3053,7 +3053,7 @@
   },
   {
     "country": "ARGENTINA",
-    "counties": {
+    "cities": {
       "Total": { "m": 38, "f": 20 },
       "New Taipei City": { "m": 8, "f": 3 },
       "Taipei City": { "m": 14, "f": 4 },
@@ -3081,7 +3081,7 @@
   },
   {
     "country": "BOLIVIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 13, "f": 5 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 4, "f": 0 },
@@ -3109,7 +3109,7 @@
   },
   {
     "country": "BRAZIL",
-    "counties": {
+    "cities": {
       "Total": { "m": 137, "f": 134 },
       "New Taipei City": { "m": 22, "f": 24 },
       "Taipei City": { "m": 38, "f": 30 },
@@ -3137,7 +3137,7 @@
   },
   {
     "country": "CHILE",
-    "counties": {
+    "cities": {
       "Total": { "m": 31, "f": 18 },
       "New Taipei City": { "m": 9, "f": 6 },
       "Taipei City": { "m": 10, "f": 6 },
@@ -3165,7 +3165,7 @@
   },
   {
     "country": "COLOMBIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 43, "f": 27 },
       "New Taipei City": { "m": 7, "f": 6 },
       "Taipei City": { "m": 13, "f": 10 },
@@ -3193,7 +3193,7 @@
   },
   {
     "country": "ECUADOR",
-    "counties": {
+    "cities": {
       "Total": { "m": 32, "f": 24 },
       "New Taipei City": { "m": 13, "f": 6 },
       "Taipei City": { "m": 7, "f": 7 },
@@ -3221,7 +3221,7 @@
   },
   {
     "country": "URUGUAY",
-    "counties": {
+    "cities": {
       "Total": { "m": 2, "f": 10 },
       "New Taipei City": { "m": 0, "f": 1 },
       "Taipei City": { "m": 0, "f": 1 },
@@ -3249,7 +3249,7 @@
   },
   {
     "country": "PARAGUAY",
-    "counties": {
+    "cities": {
       "Total": { "m": 67, "f": 69 },
       "New Taipei City": { "m": 14, "f": 17 },
       "Taipei City": { "m": 20, "f": 17 },
@@ -3277,7 +3277,7 @@
   },
   {
     "country": "PERU",
-    "counties": {
+    "cities": {
       "Total": { "m": 48, "f": 32 },
       "New Taipei City": { "m": 10, "f": 5 },
       "Taipei City": { "m": 16, "f": 9 },
@@ -3305,7 +3305,7 @@
   },
   {
     "country": "SURINAME",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 2 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 0, "f": 2 },
@@ -3333,7 +3333,7 @@
   },
   {
     "country": "TRINIDAD",
-    "counties": {
+    "cities": {
       "Total": { "m": 3, "f": 1 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -3361,7 +3361,7 @@
   },
   {
     "country": "VENEZUELA",
-    "counties": {
+    "cities": {
       "Total": { "m": 55, "f": 17 },
       "New Taipei City": { "m": 7, "f": 4 },
       "Taipei City": { "m": 7, "f": 3 },
@@ -3389,7 +3389,7 @@
   },
   {
     "country": "DOMINICA",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 1, "f": 0 },
@@ -3417,7 +3417,7 @@
   },
   {
     "country": "ALGERIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 7, "f": 3 },
       "New Taipei City": { "m": 2, "f": 1 },
       "Taipei City": { "m": 2, "f": 0 },
@@ -3445,7 +3445,7 @@
   },
   {
     "country": "BOTSWANA",
-    "counties": {
+    "cities": {
       "Total": { "m": 3, "f": 4 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -3473,7 +3473,7 @@
   },
   {
     "country": "CENTRAL AFRICAN REPUBLIC",
-    "counties": {
+    "cities": {
       "Total": { "m": 0, "f": 1 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -3501,7 +3501,7 @@
   },
   {
     "country": "CAMEROON",
-    "counties": {
+    "cities": {
       "Total": { "m": 6, "f": 1 },
       "New Taipei City": { "m": 2, "f": 0 },
       "Taipei City": { "m": 4, "f": 0 },
@@ -3529,7 +3529,7 @@
   },
   {
     "country": "CHAD",
-    "counties": {
+    "cities": {
       "Total": { "m": 3, "f": 3 },
       "New Taipei City": { "m": 1, "f": 2 },
       "Taipei City": { "m": 2, "f": 1 },
@@ -3557,7 +3557,7 @@
   },
   {
     "country": "CONGO",
-    "counties": {
+    "cities": {
       "Total": { "m": 9, "f": 0 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -3585,7 +3585,7 @@
   },
   {
     "country": "BENIN",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 1 },
       "New Taipei City": { "m": 1, "f": 1 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -3613,7 +3613,7 @@
   },
   {
     "country": "ETHIOPIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 151, "f": 10 },
       "New Taipei City": { "m": 7, "f": 2 },
       "Taipei City": { "m": 138, "f": 8 },
@@ -3641,7 +3641,7 @@
   },
   {
     "country": "GABON",
-    "counties": {
+    "cities": {
       "Total": { "m": 0, "f": 1 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -3669,7 +3669,7 @@
   },
   {
     "country": "GAMBIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 113, "f": 23 },
       "New Taipei City": { "m": 22, "f": 3 },
       "Taipei City": { "m": 23, "f": 4 },
@@ -3697,7 +3697,7 @@
   },
   {
     "country": "GHANA",
-    "counties": {
+    "cities": {
       "Total": { "m": 31, "f": 3 },
       "New Taipei City": { "m": 15, "f": 3 },
       "Taipei City": { "m": 4, "f": 0 },
@@ -3725,7 +3725,7 @@
   },
   {
     "country": "GUINEA",
-    "counties": {
+    "cities": {
       "Total": { "m": 4, "f": 0 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 1, "f": 0 },
@@ -3753,7 +3753,7 @@
   },
   {
     "country": "COTE D'IVOIRE",
-    "counties": {
+    "cities": {
       "Total": { "m": 3, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 1, "f": 0 },
@@ -3781,7 +3781,7 @@
   },
   {
     "country": "KENYA",
-    "counties": {
+    "cities": {
       "Total": { "m": 25, "f": 4 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 13, "f": 2 },
@@ -3809,7 +3809,7 @@
   },
   {
     "country": "LESOTHO",
-    "counties": {
+    "cities": {
       "Total": { "m": 0, "f": 2 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -3837,7 +3837,7 @@
   },
   {
     "country": "LIBERIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -3865,7 +3865,7 @@
   },
   {
     "country": "LIBYA",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 1, "f": 0 },
@@ -3893,7 +3893,7 @@
   },
   {
     "country": "MADAGASCAR",
-    "counties": {
+    "cities": {
       "Total": { "m": 3, "f": 1 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 0, "f": 1 },
@@ -3921,7 +3921,7 @@
   },
   {
     "country": "MALAWI",
-    "counties": {
+    "cities": {
       "Total": { "m": 33, "f": 15 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 22, "f": 6 },
@@ -3949,7 +3949,7 @@
   },
   {
     "country": "MALI",
-    "counties": {
+    "cities": {
       "Total": { "m": 3, "f": 0 },
       "New Taipei City": { "m": 2, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -3977,7 +3977,7 @@
   },
   {
     "country": "MAURITIUS",
-    "counties": {
+    "cities": {
       "Total": { "m": 15, "f": 11 },
       "New Taipei City": { "m": 1, "f": 2 },
       "Taipei City": { "m": 9, "f": 4 },
@@ -4005,7 +4005,7 @@
   },
   {
     "country": "MOROCCO",
-    "counties": {
+    "cities": {
       "Total": { "m": 23, "f": 3 },
       "New Taipei City": { "m": 5, "f": 0 },
       "Taipei City": { "m": 6, "f": 2 },
@@ -4033,7 +4033,7 @@
   },
   {
     "country": "NIGER",
-    "counties": {
+    "cities": {
       "Total": { "m": 5, "f": 1 },
       "New Taipei City": { "m": 2, "f": 0 },
       "Taipei City": { "m": 2, "f": 0 },
@@ -4061,7 +4061,7 @@
   },
   {
     "country": "NIGERIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 65, "f": 6 },
       "New Taipei City": { "m": 32, "f": 4 },
       "Taipei City": { "m": 11, "f": 1 },
@@ -4089,7 +4089,7 @@
   },
   {
     "country": "ZIMBABWE",
-    "counties": {
+    "cities": {
       "Total": { "m": 6, "f": 7 },
       "New Taipei City": { "m": 1, "f": 1 },
       "Taipei City": { "m": 2, "f": 1 },
@@ -4117,7 +4117,7 @@
   },
   {
     "country": "RWANDA",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -4145,7 +4145,7 @@
   },
   {
     "country": "SENEGAL",
-    "counties": {
+    "cities": {
       "Total": { "m": 6, "f": 1 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 0, "f": 1 },
@@ -4173,7 +4173,7 @@
   },
   {
     "country": "SIERRA LEONE",
-    "counties": {
+    "cities": {
       "Total": { "m": 2, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -4201,7 +4201,7 @@
   },
   {
     "country": "SOMALIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 2, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 2, "f": 0 },
@@ -4229,7 +4229,7 @@
   },
   {
     "country": "SOUTH AFRICA",
-    "counties": {
+    "cities": {
       "Total": { "m": 596, "f": 413 },
       "New Taipei City": { "m": 106, "f": 42 },
       "Taipei City": { "m": 98, "f": 59 },
@@ -4257,7 +4257,7 @@
   },
   {
     "country": "SUDAN",
-    "counties": {
+    "cities": {
       "Total": { "m": 4, "f": 0 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 1, "f": 0 },
@@ -4285,7 +4285,7 @@
   },
   {
     "country": "SWAZILAND",
-    "counties": {
+    "cities": {
       "Total": { "m": 115, "f": 103 },
       "New Taipei City": { "m": 11, "f": 10 },
       "Taipei City": { "m": 19, "f": 17 },
@@ -4313,7 +4313,7 @@
   },
   {
     "country": "TANZANIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 9, "f": 2 },
       "New Taipei City": { "m": 2, "f": 0 },
       "Taipei City": { "m": 1, "f": 0 },
@@ -4341,7 +4341,7 @@
   },
   {
     "country": "TOGO",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 0 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -4369,7 +4369,7 @@
   },
   {
     "country": "TUNISIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 7, "f": 0 },
       "New Taipei City": { "m": 2, "f": 0 },
       "Taipei City": { "m": 2, "f": 0 },
@@ -4397,7 +4397,7 @@
   },
   {
     "country": "UGANDA",
-    "counties": {
+    "cities": {
       "Total": { "m": 8, "f": 7 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 2 },
@@ -4425,7 +4425,7 @@
   },
   {
     "country": "EGYPT",
-    "counties": {
+    "cities": {
       "Total": { "m": 81, "f": 12 },
       "New Taipei City": { "m": 8, "f": 0 },
       "Taipei City": { "m": 38, "f": 7 },
@@ -4453,7 +4453,7 @@
   },
   {
     "country": "BURKINA FASO",
-    "counties": {
+    "cities": {
       "Total": { "m": 117, "f": 15 },
       "New Taipei City": { "m": 33, "f": 5 },
       "Taipei City": { "m": 20, "f": 1 },
@@ -4481,7 +4481,7 @@
   },
   {
     "country": "ZAMBIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 2, "f": 2 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -4509,7 +4509,7 @@
   },
   {
     "country": "BAHRAIN",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 1, "f": 0 },
@@ -4537,7 +4537,7 @@
   },
   {
     "country": "MOZAMBIQUE",
-    "counties": {
+    "cities": {
       "Total": { "m": 3, "f": 2 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 1, "f": 1 },
@@ -4565,7 +4565,7 @@
   },
   {
     "country": "CAPE VERDE",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 0 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -4593,7 +4593,7 @@
   },
   {
     "country": "SAO TOME AND PRINCIPE",
-    "counties": {
+    "cities": {
       "Total": { "m": 6, "f": 4 },
       "New Taipei City": { "m": 5, "f": 2 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -4621,7 +4621,7 @@
   },
   {
     "country": "NAMIBIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 1, "f": 3 },
       "New Taipei City": { "m": 0, "f": 1 },
       "Taipei City": { "m": 0, "f": 0 },
@@ -4649,7 +4649,7 @@
   },
   {
     "country": "THE REPUBLIC OF CONGO",
-    "counties": {
+    "cities": {
       "Total": { "m": 9, "f": 2 },
       "New Taipei City": { "m": 1, "f": 0 },
       "Taipei City": { "m": 7, "f": 0 },
@@ -4677,7 +4677,7 @@
   },
   {
     "country": "SAINT VINCENT AND THE GRENADINES",
-    "counties": {
+    "cities": {
       "Total": { "m": 35, "f": 51 },
       "New Taipei City": { "m": 2, "f": 7 },
       "Taipei City": { "m": 14, "f": 13 },
@@ -4705,7 +4705,7 @@
   },
   {
     "country": "SAINT LUCIA",
-    "counties": {
+    "cities": {
       "Total": { "m": 46, "f": 44 },
       "New Taipei City": { "m": 8, "f": 17 },
       "Taipei City": { "m": 4, "f": 2 },
@@ -4733,7 +4733,7 @@
   },
   {
     "country": "SAINT CHRISTOPHER",
-    "counties": {
+    "cities": {
       "Total": { "m": 36, "f": 32 },
       "New Taipei City": { "m": 3, "f": 5 },
       "Taipei City": { "m": 6, "f": 8 },
@@ -4761,7 +4761,7 @@
   },
   {
     "country": "BELIZE",
-    "counties": {
+    "cities": {
       "Total": { "m": 87, "f": 67 },
       "New Taipei City": { "m": 10, "f": 8 },
       "Taipei City": { "m": 13, "f": 15 },
@@ -4789,7 +4789,7 @@
   },
   {
     "country": "OTHER",
-    "counties": {
+    "cities": {
       "Total": { "m": 2, "f": 1 },
       "New Taipei City": { "m": 0, "f": 0 },
       "Taipei City": { "m": 0, "f": 0 },

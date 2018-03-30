@@ -1,7 +1,8 @@
 <template>
   <div class="chart">
     <svg v-if="svgReady" :height="canvasHeight">
-      <transition-group tag="g" name="list">
+      <!-- COUNTRIES LIST -->
+      <transition-group v-if="!filters.regions" tag="g" name="list">
         <g v-for="(row, index) in chartData" :key="row.country" class="list-row">
           <image 
             class="flag-icon" 
@@ -9,7 +10,7 @@
             :y="index * 50" 
             :xlink:href="`flag-icons/svg/${countryAliases[row.country].code}.svg`" />       
           <text
-            class="row-text"
+            class="row-text has-flag"
             :y="index * 50 + 15"
             :x="0">
             <tspan>{{ countryAliases[row.country].alias }}</tspan>
@@ -17,7 +18,7 @@
             <tspan dx="10" class="tspan female">{{ row.female }}</tspan>
           </text>
           <text
-            class="row-code"
+            class="row-code has-flag"
             :y="index * 50 + 15"
             :x="0">
             {{ countryAliases[row.country].code }}
@@ -39,7 +40,44 @@
             :height="20">
           </rect>
         </g>
-			</transition-group>      
+			</transition-group>
+      <!-- -->
+      <!-- REGIONS LIST -->   
+      <transition-group v-else-if="filters.regions" tag="g" name="list">
+        <g v-for="(row, index) in chartData" :key="row.region" class="list-row">
+          <text
+            class="row-text"
+            :y="index * 50 + 15"
+            :x="0">
+            <tspan>{{ row.region }}</tspan>
+            <tspan dx="10" class="tspan male">{{ row.male }}</tspan>
+            <tspan dx="10" class="tspan female">{{ row.female }}</tspan>
+          </text>
+          <text
+            class="row-code"
+            :y="index * 50 + 15"
+            :x="0">
+            <tspan>{{ row.region }}</tspan>
+          </text>
+          <rect 
+            class="row-bar male" 
+            :key="'male-' + index" 
+            :y="50 * index" 
+            :x="0"
+            :width="row.maleWidth" 
+            :height="20">
+          </rect>
+          <rect 
+            class="row-bar female" 
+            :key="'female-' + index" 
+            :y="50 * index" 
+            :x="row.maleWidth"
+            :width="row.femaleWidth" 
+            :height="20">
+          </rect>
+        </g>
+			</transition-group>
+      <!-- -->    
     </svg>
   </div>
 </template>
@@ -82,7 +120,8 @@ export default {
       canvasHeight: null,
       jsonData: null,
       chartData: [],
-      countryAliases
+      countryAliases,
+      showingRegions: false
     };
   },
   computed: {
@@ -92,8 +131,8 @@ export default {
     }
   },
   watch: {
-    jsonData() {
-      if (!this.jsonData) return;
+    jsonData () {
+      if(!this.jsonData) return;
       this.generateChart();
     },
     selectedCity(newCity, oldCity) {
@@ -107,7 +146,12 @@ export default {
     },
     filters: {
       handler: function(newFilters) {
-        this.chartData = this.sortChart(this.chartData);
+        if (newFilters.regions === this.showingRegions) {
+          this.chartData = this.sortChart(this.chartData);
+        } else {
+          this.generateChart();
+        }
+        this.showingRegions = newFilters.regions;
       },
       deep: true
     }
@@ -132,6 +176,69 @@ export default {
       requestAnimationFrame(animate);
     },
     generateChart() {
+      if (this.filters.regions) {
+        this.generateChartRegions();
+      } else {
+        this.generateChartCountries();
+      }
+    },
+    generateChartRegions() {
+      const chartEl = document.getElementsByClassName("chart")[0];
+      // Arbitrary bar width for mobile
+      const barWidth = chartEl.offsetWidth / 4;
+
+      let newData = [];
+      this.jsonData.forEach((data, index) => {
+        if (countryAliases[data.country]) {
+          const city = data.cities[this.selectedCity];
+          const countryRegion = countryAliases[data.country].region;
+          const entry = newData.find(entry => entry.region === countryRegion);
+          if (entry) {
+            entry.male += city.m;
+            entry.female += city.f;
+          } else {
+            const entry = {
+              region: countryRegion,
+              maleWidth: 0,
+              femaleWidth: 0,
+              male: city.m,
+              female: city.f
+            };
+            newData.push(entry);
+          }
+        }
+      });
+
+      const scaleSqrt = d3
+        .scaleSqrt()
+        .domain([
+          2,
+          d3.max(newData, d => {
+            return d.male + d.female;
+          })
+        ])
+        .range([0, barWidth]);
+
+      newData = newData.reduce((arr, entry) => {
+        // Previous data for animated transitions
+        const prevEntry = this.chartData.find(c => c.region === entry.region);
+        const prevMaleWidth = prevEntry ? prevEntry.maleWidth : 0;
+        const prevFemaleWidth = prevEntry ? prevEntry.maleWidth : 0;
+        
+        if (entry.male > 2 && entry.female > 2) {
+          entry.maleWidth = this.filters.male ? prevMaleWidth : 0;
+          entry.femaleWidth = this.filters.female ? prevFemaleWidth : 0;
+          entry.maleScaled = scaleSqrt(entry.male);
+          entry.femaleScaled = scaleSqrt(entry.female);
+          arr.push(entry);
+        }
+        return arr;
+      }, []);
+
+      this.canvasHeight = newData.length * 50;
+      this.chartData = this.sortChart(newData);
+    },
+    generateChartCountries() {
       const chartEl = document.getElementsByClassName("chart")[0];
       // Arbitrary bar width for mobile
       const barWidth = chartEl.offsetWidth / 4;
@@ -140,7 +247,9 @@ export default {
         .domain([
           2,
           d3.max(this.jsonData, d => {
-            return d.cities[this.selectedCity].m;
+            return (
+              d.cities[this.selectedCity].m + d.cities[this.selectedCity].f
+            );
           })
         ])
         .range([0, barWidth]);
@@ -149,6 +258,7 @@ export default {
       this.jsonData.forEach((data, index) => {
         const city = data.cities[this.selectedCity];
         const prevEntry = this.chartData.find(c => c.country === data.country);
+        // Previous data for animated transitions
         const prevMaleWidth = prevEntry ? prevEntry.maleWidth : 0;
         const prevFemaleWidth = prevEntry ? prevEntry.maleWidth : 0;
         // Higher than 1 otherwise log returns negative width
@@ -218,8 +328,9 @@ export default {
 
 <style scoped lang="scss">
 .chart {
-  width: calc(100% - 30px);
-  max-width: 800px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
   margin: 0 auto;
   position: relative;
   svg {
@@ -266,25 +377,25 @@ export default {
     .row-text {
       display: none;
     }
-    .row-code {
-      transform: translateX(40px);
-    }
     .row-bar {
       transform: translateX(100px);
+    }
+    .has-flag {
+      transform: translateX(40px);
     }
   }
 }
 
 @media (min-width: 700px) {
   .chart {
-    .row-text {
-      transform: translateX(40px);
-    }
     .row-code {
       display: none;
     }
     .row-bar {
-      transform: translateX(240px);
+      transform: translateX(300px);
+    }
+    .has-flag {
+      transform: translateX(40px);
     }
   }
 }

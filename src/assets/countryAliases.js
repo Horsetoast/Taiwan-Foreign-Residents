@@ -1,9 +1,10 @@
 /* Countries code reference https://github.com/yammadev/flag-icons */
 
 export default {
-  "STATELESS": { code: "WW", alias: "Stateless", region: "" },
+  "STATELESS": { code: "WW", alias: "Stateless", region: "Other" },
   
   "BRUNEI DARUSSALAM": { code: "BN", alias: "Brunei", region: "SE Asia" },
+  "BHUTAN": { code: "BT", alias: "Bhutan", region: "SE Asia" },
   "MYANMAR": { code: "MM", alias: "Myanmar", region: "SE Asia" },
   "CAMBODIA": { code: "KH", alias: "Cambodia", region: "SE Asia" },
   "INDONESIA": { code: "ID", alias: "Indonesia", region: "SE Asia" },
@@ -12,6 +13,7 @@ export default {
   "PHILIPPINES": { code: "PH", alias: "Philippines", region: "SE Asia" },
   "SINGAPORE": { code: "SG", alias: "Singapore", region: "SE Asia" },
   "THAILAND": { code: "TH", alias: "Thailand", region: "SE Asia" },
+  "TIMOR": { code: "TL", alias: "Timor", region: "SE Asia" },
   "VIETNAM": { code: "VN", alias: "Vietnam", region: "SE Asia" },
   
   "NEPAL": { code: "NP", alias: "Nepal", region: "S Asia" },
@@ -20,12 +22,18 @@ export default {
   "SRI LANKA": { code: "LK", alias: "Sri Lanka", region: "S Asia" },
   "BANGLADESH": { code: "BD", alias: "Bangladesh", region: "S Asia" },
   
+  "AFGHANISTAN": { code: "AF", alias: "Afghanistan", region: "Middle East" },
   "IRAN": { code: "IR", alias: "Iran", region: "Middle East" },
   "IRAQ": { code: "IQ", alias: "Iraq", region: "Middle East" },
   "ISRAEL": { code: "IL", alias: "Israel", region: "Middle East" },
   "JORDAN": { code: "JO", alias: "Jordan", region: "Middle East" },
+  "LEBANON": { code: "LB", alias: "Lebanon", region: "Middle East" },
+  "OMAN": { code: "OM", alias: "Oman", region: "Middle East" },
+  "PALESTINIAN": { code: "WW", alias: "Palestine", region: "Middle East" },
   "SYRIAN ARAB": { code: "SY", alias: "Syria", region: "Middle East" },
   "TURKEY": { code: "TR", alias: "Turkey", region: "Middle East" },
+  "UNITED ARAB": { code: "AE", alias: "UAE", region: "Middle East" },
+  "YEMEN": { code: "YE", alias: "Yemen", region: "Middle East" },
   
   "JAPAN": { code: "JP", alias: "Japan", region: "E Asia" },
   "KOREA": { code: "KR", alias: "Korea", region: "E Asia" },
@@ -51,6 +59,7 @@ export default {
   "AUSTRIA": { code: "AT", alias: "Austria", region: "Europe" },
   "BELGIUM": { code: "BE", alias: "Belgium", region: "Europe" },
   "BELARUS": { code: "BY", alias: "Belarus", region: "Europe" },
+  "CYPRUS": { code: "CY", alias: "Cyprus", region: "Europe" },
   "CZECH": { code: "CZ", alias: "Czech Republic", region: "Europe" },
   "DENMARK": { code: "DK", alias: "Denmark", region: "Europe" },
   "FINLAND": { code: "FI", alias: "Finland", region: "Europe" },

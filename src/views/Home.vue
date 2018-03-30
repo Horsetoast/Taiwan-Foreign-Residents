@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div id="home">
     <div id="city-selector">
       <span>Select city</span>
       <dropdown
@@ -12,7 +12,7 @@
       <div id="chart-filters">
         <ul>
           <li><span>Sort by</span></li>
-          <li><a href="#" @click.prevent="orderBy('country')" :class="{'is-active': filters.orderBy === 'country'}">Country name</a></li>
+          <li><a href="#" @click.prevent="orderBy('country')" :class="{'is-active': filters.orderBy === 'country'}">Name</a></li>
           <li>
             <a href="#" @click.prevent="orderBy('highest')" :class="{'is-active': filters.orderBy === 'highest'}">
               <span class="icon icon-up-dir"></span>
@@ -38,6 +38,16 @@
             <a href="#" class="gender female" @click.prevent="toggleGender('female')" :class="{'is-active': filters.female}">
               <span class="icon icon-female"></span>
               <span>Female</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" @click.prevent="toggleRegions(true)" :class="{'is-active': filters.regions}">
+              <span>Regions</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" @click.prevent="toggleRegions(false)" :class="{'is-active': !filters.regions}">
+              <span>Countries</span>
             </a>
           </li>
         </ul>
@@ -70,7 +80,8 @@ export default {
       filters: {
         orderBy: "country",
         male: true,
-        female: true
+        female: true,
+        regions: false
       },
       countiesList: [
         {label: "Total", selected: true},
@@ -106,6 +117,9 @@ export default {
     orderBy (type) {
       this.filters.orderBy = type;
     },
+    toggleRegions () {
+      this.filters.regions = !this.filters.regions;
+    },
     toggleGender (gender) {
       if(this.filters.male && this.filters.female || this.filters[gender] === false) {
         this.filters[gender] = !this.filters[gender];
@@ -119,9 +133,19 @@ export default {
 body {
   background: #222536;    
 }
+
+#home {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 #city-selector {
   width: 100%;
-  padding: 50px 0 10px;
+  padding: 50px 20px 10px;
+  box-sizing: border-box;
   margin: 0 auto;
   max-width: 800px;
   & > span {
@@ -160,10 +184,9 @@ body {
 #chart-filters {
   color: #989cb3;
   max-width: 800px;
-  width: calc(100% - 40px);
-  margin: 0 auto 40px;
-  border-bottom: 1px solid lighten(#222536, 10%);
-  padding: 20px 0;
+  width: 100%;
+  margin: 0 auto 20px;
+  padding: 20px;
   box-sizing: border-box;
   font-size: 0.85em;
   ul {
