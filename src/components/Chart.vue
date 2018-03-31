@@ -382,6 +382,9 @@ export default {
     .row-bar {
       display: none;
     }
+    .row-code {
+      display: none;
+    }
     .has-flag {
       transform: translateX(40px);
     }
