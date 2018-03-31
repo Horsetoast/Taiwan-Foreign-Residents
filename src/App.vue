@@ -4,9 +4,12 @@
   </div>
 </template>
 
+<script>
+</script>
+
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
-@import '/css/fontello.css';
+@import url('assets/css/fontello.css');
 
 body, html {
   margin: 0;

@@ -54,6 +54,10 @@
       </div>      
       <Chart :selectedCity="selectedCity" :filters="filters" />
     </div>
+    <a href="https://github.com/Horsetoast/TW-Immigration-Chart" target="_blank" id="github-icon">
+      <span class="icon icon-github-circled"></span>
+      <span>Github</span>
+    </a>
   </div>
 </template>
 
@@ -181,6 +185,28 @@ body {
   }
 }
 
+#github-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: inline-block;
+  background: linear-gradient(to bottom, #f9fafb 0%,#e6edf1 100%);
+  text-decoration: none;
+  padding: 5px 10px 5px 7px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: bold;
+  &:hover {
+    background: #e6edf1;
+  }
+  span.icon {
+    margin-right: 3px;
+  }
+  span {
+    color: #25292e;
+  }
+}
+
 #chart-filters {
   color: #989cb3;
   max-width: 800px;
@@ -203,7 +229,7 @@ body {
       display: inline-block;
       text-decoration: none;
       color: #989cb3;
-      background: lighten(#222536, 10%);
+      border: 1px solid lighten(#222536, 10%); 
       padding: 8px 14px;
       border-radius: 20px;
       .icon {
@@ -212,23 +238,29 @@ body {
       &:hover {
         color: #fff;
         background: lighten(#222536, 14%);
+        border: 1px solid lighten(#222536, 14%); 
       }
       &.is-active {
         color: #fff;
+        background: lighten(#222536, 10%);
       }
       &.gender {
         &.male {
           color: #fff;
           background: #00a4ed;
+          border: 1px solid #00a4ed;
           &:hover {
             background: darken(#00a4ed, 8%);
+            border: 1px solid darken(#00a4ed, 8%);
           }
         }
         &.female {
           color: #fff;
           background: #e52669;
+          border: 1px solid #e52669; 
           &:hover {
             background: darken(#e52669, 8%);
+            border: 1px solid darken(#e52669, 8%);
           }          
         }
         &:not(.is-active) {
@@ -244,6 +276,9 @@ body {
 }
 
 @media (max-width: 700px) {
+  #github-icon {
+    display: none;
+  }
   #city-selector {
     padding-top: 15px;
     width: calc(100% - 30px);  
