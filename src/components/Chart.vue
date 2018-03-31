@@ -291,9 +291,9 @@ export default {
           const countM = this.filters.male;
           const countF = this.filters.female;
           const aSum =
-            (countM ? a.maleScaled : 0) + (countF ? a.femaleScaled : 0);
+            (countM ? a.male : 0) + (countF ? a.female : 0);
           const bSum =
-            (countM ? b.maleScaled : 0) + (countF ? b.femaleScaled : 0);
+            (countM ? b.male : 0) + (countF ? b.female : 0);
           if (aSum < bSum) {
             return orderBy === "highest" ? 1 : -1;
           } else if (aSum > bSum) {
