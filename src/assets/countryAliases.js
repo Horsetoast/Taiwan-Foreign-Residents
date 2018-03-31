@@ -40,7 +40,7 @@ export default {
 
   "JAPAN": { code: "JP", alias: "Japan", region: "E Asia" },
   "KOREA": { code: "KR", alias: "Korea", region: "E Asia" },
-  "MACAO": { code: "MO", alias: "Macao", region: "" },
+  "MACAO": { code: "MO", alias: "Macao", region: "E Asia" },
   
   "MONGOLIA": { code: "MN", alias: "Mongolia", region: "Central Asia" },
   "ARMENIA": { code: "AM", alias: "Armenia", region: "Central Asia" },
