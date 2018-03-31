@@ -189,9 +189,9 @@ export default {
 
       let newData = [];
       this.jsonData.forEach((data, index) => {
-        if (getCountry(data.country)) {
+        if (this.getCountry(data.country)) {
           const city = data.cities[this.selectedCity];
-          const countryRegion = getCountry(data.country).region;
+          const countryRegion = this.getCountry(data.country).region;
           const entry = newData.find(entry => entry.region === countryRegion);
           if (entry) {
             entry.male += city.m;
