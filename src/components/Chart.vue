@@ -14,8 +14,8 @@
             :y="index * 50 + 15"
             :x="0">
             <tspan>{{ getCountry(row.country).alias }}</tspan>
-            <tspan dx="10" class="tspan male">{{ row.male }}</tspan>
-            <tspan dx="10" class="tspan female">{{ row.female }}</tspan>
+            <tspan dx="10" class="tspan male" :class="{'is-hidden': !filters.male}">{{ row.male }}</tspan>
+            <tspan dx="10" class="tspan female" :class="{'is-hidden': !filters.female}">{{ row.female }}</tspan>
           </text>
           <text
             class="row-code has-flag"
@@ -374,6 +374,9 @@ export default {
   }
   .list-leave-active {
     position: absolute;
+  }
+  .is-hidden {
+    display: none;
   }
 }
 
