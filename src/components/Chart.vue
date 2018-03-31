@@ -8,12 +8,12 @@
             class="flag-icon" 
             :x="0"
             :y="index * 50" 
-            :xlink:href="`flag-icons/svg/${countryAliases[row.country].code}.svg`" />       
+            :xlink:href="`flag-icons/svg/${getCountry(row.country).code}.svg`" />       
           <text
             class="row-text has-flag"
             :y="index * 50 + 15"
             :x="0">
-            <tspan>{{ countryAliases[row.country].alias }}</tspan>
+            <tspan>{{ getCountry(row.country).alias }}</tspan>
             <tspan dx="10" class="tspan male">{{ row.male }}</tspan>
             <tspan dx="10" class="tspan female">{{ row.female }}</tspan>
           </text>
@@ -21,7 +21,7 @@
             class="row-code has-flag"
             :y="index * 50 + 15"
             :x="0">
-            {{ countryAliases[row.country].code }}
+            {{ getCountry(row.country).code }}
           </text>
           <rect 
             class="row-bar male" 
@@ -189,9 +189,9 @@ export default {
 
       let newData = [];
       this.jsonData.forEach((data, index) => {
-        if (countryAliases[data.country]) {
+        if (getCountry(data.country)) {
           const city = data.cities[this.selectedCity];
-          const countryRegion = countryAliases[data.country].region;
+          const countryRegion = getCountry(data.country).region;
           const entry = newData.find(entry => entry.region === countryRegion);
           if (entry) {
             entry.male += city.m;
@@ -225,13 +225,11 @@ export default {
         const prevMaleWidth = prevEntry ? prevEntry.maleWidth : 0;
         const prevFemaleWidth = prevEntry ? prevEntry.maleWidth : 0;
         
-        if (entry.male > 2 && entry.female > 2) {
-          entry.maleWidth = this.filters.male ? prevMaleWidth : 0;
-          entry.femaleWidth = this.filters.female ? prevFemaleWidth : 0;
-          entry.maleScaled = scaleSqrt(entry.male);
-          entry.femaleScaled = scaleSqrt(entry.female);
-          arr.push(entry);
-        }
+        entry.maleWidth = this.filters.male ? prevMaleWidth : 0;
+        entry.femaleWidth = this.filters.female ? prevFemaleWidth : 0;
+        entry.maleScaled = entry.m < 2 ? 1 : scaleSqrt(entry.male);
+        entry.femaleScaled = entry.f < 2 ? 1: scaleSqrt(entry.female);
+        arr.push(entry);
         return arr;
       }, []);
 
@@ -262,18 +260,16 @@ export default {
         const prevMaleWidth = prevEntry ? prevEntry.maleWidth : 0;
         const prevFemaleWidth = prevEntry ? prevEntry.maleWidth : 0;
         // Higher than 1 otherwise log returns negative width
-        if (city.m > 2 && city.f > 2) {
-          const entry = {
-            country: data.country,
-            maleWidth: this.filters.male ? prevMaleWidth : 0,
-            femaleWidth: this.filters.female ? prevFemaleWidth : 0,
-            maleScaled: scaleSqrt(city.m),
-            femaleScaled: scaleSqrt(city.f),
-            male: city.m,
-            female: city.f
-          };
-          newData.push(entry);
-        }
+        const entry = {
+          country: data.country,
+          maleWidth: this.filters.male ? prevMaleWidth : 0,
+          femaleWidth: this.filters.female ? prevFemaleWidth : 0,
+          maleScaled: city.m < 2 ? 1 : scaleSqrt(city.m),
+          femaleScaled: city.f < 2 ? 1 : scaleSqrt(city.f),
+          male: city.m,
+          female: city.f
+        };
+        newData.push(entry);
       });
       this.canvasHeight = newData.length * 50;
       this.chartData = this.sortChart(newData);
@@ -306,6 +302,15 @@ export default {
             return 0;
           }
         });
+      }
+    },
+    getCountry (name) {
+      if (countryAliases[name]) {
+        return countryAliases[name];
+      } else {
+        return {
+          alias: name
+        };
       }
     },
     animateChart() {
