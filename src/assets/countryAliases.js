@@ -125,7 +125,7 @@ export default {
   "BELIZE": { code: "BZ", alias: "Belize", region: "Central America" },
   "BARBADOS": { code: "BB", alias: "Barbados", region: "Central America" },
   "CUBA": { code: "CU", alias: "Cuba", region: "Central America" },
-  "DOMINICA": { code: "DO", alias: "Dominica", region: "Central America" },
+  "DOMINICA": { code: "DM", alias: "Dominica", region: "Central America" },
   "JAMAICA": { code: "JM", alias: "Jamaica", region: "Central America" },
   "TRINIDAD": { code: "TT", alias: "Trinidad", region: "Central America" },
 
