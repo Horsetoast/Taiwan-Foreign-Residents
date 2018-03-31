@@ -379,11 +379,8 @@ export default {
 
 @media (max-width: 700px) {
   .chart {
-    .row-text {
-      display: none;
-    }
     .row-bar {
-      transform: translateX(100px);
+      display: none;
     }
     .has-flag {
       transform: translateX(40px);
